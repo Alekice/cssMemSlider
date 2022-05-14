@@ -147,6 +147,24 @@ input[name="radio-btn"] {
     background: transparent;
 }
 
+#radio-btn1:checked ~ .carousel__nav label[for="radio-btn1"]:active > *,
+#radio-btn2:checked ~ .carousel__nav label[for="radio-btn2"]:active > *,
+#radio-btn3:checked ~ .carousel__nav label[for="radio-btn3"]:active > *,
+#radio-btn4:checked ~ .carousel__nav label[for="radio-btn4"]:active > * {
+    border-color: #F8D64F;
+    background: transparent;
+    box-shadow: 0 0 1rem #F8D64F;
+}
+
+.carousel__nav label[for="radio-btn1"]:active > *,
+.carousel__nav label[for="radio-btn2"]:active > *,
+.carousel__nav label[for="radio-btn3"]:active > *,
+.carousel__nav label[for="radio-btn4"]:active > * {
+    border-color: #F8D64F;
+    background-color: #F8D64F;
+    box-shadow: 0 0 1rem #F8D64F;
+}
+
 /******** SHOW IMAGES ********/
 
 #radio-btn1:checked ~ .carousel__inner .card1 .card__image {
