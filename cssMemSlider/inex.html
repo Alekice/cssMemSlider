@@ -7,10 +7,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Mem Slider</title>
     <link rel="icon" href="./assets/favicon.ico">
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
+    <div class="container">
+        <div class="carousel">
 
+            <input type="radio" name="radio-btn" id="radio-btn1" checked>
+            <input type="radio" name="radio-btn" id="radio-btn2">
+            <input type="radio" name="radio-btn" id="radio-btn3">
+            <input type="radio" name="radio-btn" id="radio-btn4">
+
+            <div class="carousel__inner">
+                <div class="card card1">
+                    <img class="card__image" src="./assets/img/mem1.jpg" alt="Mem1">
+                    <p class="card__text">
+                        "Пароль неверный"<br>
+                        *меняет пароль*<br>
+                        "Новый пароль должен отличаться от старого"
+                    </p>
+                </div>
+                <div class="card card2">
+                    <img class="card__image" src="./assets/img/mem2.jpg" alt="Mem2">
+                    <p class="card__text">
+                        "Мои творческие идеи"<br>
+                        "Я, воплощающий мои творческие идеи"
+                    </p>
+                </div>
+                <div class="card card3">
+                    <img class="card__image" src="./assets/img/mem3.jpg" alt="Mem3">
+                    <p class="card__text">
+                        - Врачи: "купите это"<br>
+                        - И фармацевты вам это выдадут
+                    </p>
+                </div>
+                <div class="card card4">
+                    <img class="card__image" src="./assets/img/mem4.jpg" alt="Mem4">
+                    <p class="card__text">
+                        Когда вы деретесь со своими братьями и сестрами и заходит мама
+                    </p>
+                </div>
+            </div>
+
+            <div class="carousel__nav">
+                <label for="radio-btn1" class="carousel__navlink"></label>
+                <label for="radio-btn2" class="carousel__navlink"></label>
+                <label for="radio-btn3" class="carousel__navlink"></label>
+                <label for="radio-btn4" class="carousel__navlink"></label>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

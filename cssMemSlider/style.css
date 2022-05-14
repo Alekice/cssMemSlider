@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #25282A;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.carousel {
+    width: 100%;
+    height: 618px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 0 32px;
+}
+
+.carousel__inner {
+    width: 4800px;
+    height: 100%;
+    display: flex;
+}
+
+.card {
+    width: 25%;
+    height: 100%;
+    scroll-snap-align: center;
+    display: flex;
+    flex-direction: column;
+    transition: .6s;
+}
+
+.card__image {
+    width: 500px;
+    aspect-ratio: 1 / 1;
+    margin: 0 0 32px 0;
+    align-self: center;
+}
+
+input[name="radio-btn"] {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.carousel__nav {
+    display: flex;
+    align-self: flex-end;
+}
+
+.carousel__navlink {
+    width: 20px;
+    height: 20px;
+    margin: 4px;
+    border-radius: 100%;
+    transition: .3s;
+    background-color: #08313A;
+    border: 2px solid #08313A;
+    cursor: pointer;
+}
+
+.carousel__navlink:hover {
+    background-color: #107869;
+    border-color: #107869;
+}
+
+/******** CHANGE SLIDES ********/
+
+#radio-btn1:checked ~ .carousel__inner .card1 {
+    margin-left: 0;
+}
+
+#radio-btn2:checked ~ .carousel__inner .card1 {
+    margin-left: -25%;
+}
+
+#radio-btn3:checked ~ .carousel__inner .card1 {
+    margin-left: -50%;
+}
+
+#radio-btn4:checked ~ .carousel__inner .card1 {
+    margin-left: -75%;
+}
+
+/******** CHANGE BUTTONS ********/
+
+#radio-btn1:checked ~ .carousel__nav label[for="radio-btn1"],
+#radio-btn2:checked ~ .carousel__nav label[for="radio-btn2"],
+#radio-btn3:checked ~ .carousel__nav label[for="radio-btn3"],
+#radio-btn4:checked ~ .carousel__nav label[for="radio-btn4"] {
+    border-color: #08313A;
+    background: transparent;
+}
