@@ -131,18 +131,18 @@ input[name="radio-btn"] {
 
 /******** CHANGE BUTTONS ********/
 
-#radio-btn1:checked ~ .carousel__nav label[for="radio-btn1"],
-#radio-btn2:checked ~ .carousel__nav label[for="radio-btn2"],
-#radio-btn3:checked ~ .carousel__nav label[for="radio-btn3"],
-#radio-btn4:checked ~ .carousel__nav label[for="radio-btn4"] {
+#radio-btn1:checked ~ .carousel__nav label[for="radio-btn1"] > *,
+#radio-btn2:checked ~ .carousel__nav label[for="radio-btn2"] > *,
+#radio-btn3:checked ~ .carousel__nav label[for="radio-btn3"] > *,
+#radio-btn4:checked ~ .carousel__nav label[for="radio-btn4"] > * {
     border-color: #FFFFFF;
     background: transparent;
 }
 
-#radio-btn1:checked ~ .carousel__nav label[for="radio-btn1"]:hover,
-#radio-btn2:checked ~ .carousel__nav label[for="radio-btn2"]:hover,
-#radio-btn3:checked ~ .carousel__nav label[for="radio-btn3"]:hover,
-#radio-btn4:checked ~ .carousel__nav label[for="radio-btn4"]:hover {
+#radio-btn1:checked ~ .carousel__nav label[for="radio-btn1"]:hover > *,
+#radio-btn2:checked ~ .carousel__nav label[for="radio-btn2"]:hover > *,
+#radio-btn3:checked ~ .carousel__nav label[for="radio-btn3"]:hover > *,
+#radio-btn4:checked ~ .carousel__nav label[for="radio-btn4"]:hover > * {
     border-color: #107869;
     background: transparent;
 }
