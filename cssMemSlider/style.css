@@ -87,17 +87,26 @@ input[name="radio-btn"] {
 }
 
 .carousel__navlink {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 100%;
+    transition: .3s;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel__navlink > * {
     width: 2rem;
     height: 2rem;
-    margin: 0.4rem;
     border-radius: 100%;
     transition: .3s;
     background-color: #FFFFFF;
     border: 2px solid #FFFFFF;
-    cursor: pointer;
 }
 
-.carousel__navlink:hover {
+.carousel__navlink:hover > * {
     background-color: #107869;
     border-color: #107869;
 }
@@ -203,10 +212,15 @@ input[name="radio-btn"] {
     .carousel__nav {
         align-self: center;
         transform: translate(0);
-        transform: translateY(-580%);
+        transform: translateY(-530%);
     }
     
     .carousel__navlink {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .carousel__navlink > * {
         width: 1.5rem;
         height: 1.5rem;
     }
@@ -219,6 +233,6 @@ input[name="radio-btn"] {
         margin: 16px 0;
     }
     .carousel__nav {
-        transform: translateY(-680%);
+        transform: translateY(-630%);
     }
 }
