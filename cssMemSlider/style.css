@@ -13,8 +13,8 @@ html {
 
 .container {
     width: 100%;
-    max-width: 1200px;
-    height: 100vh;
+    max-width: 768px;
+    min-height: 100vh;
     margin: 0 auto;
     padding: 0 16px;
     display: flex;
@@ -27,7 +27,7 @@ html {
     font-size: 3.2rem;
     letter-spacing: 0.03em;
     text-align: center;
-    margin: 0 0 32px 0;
+    margin: 32px 0;
 }
 
 .carousel {
@@ -44,16 +44,16 @@ html {
 
 .card {
     width: 25%;
-    height: 668px;
-    padding: 32px;
+    padding: 0 32px 32px 32px;
     display: flex;
     flex-direction: column;
     transition: .6s;
 }
 
 .card__image {
-    width: 500px;
+    width: 100%;
     aspect-ratio: 1 / 1;
+    object-fit: cover;
     margin: 0 0 32px 0;
     align-self: center;
     opacity: 0;
@@ -66,7 +66,8 @@ html {
     font-size: 1.6rem;
     letter-spacing: 0.03em;
     font-weight: 700;
-    width: 40%;
+    line-height: 1.5;
+    width: 60%;
     opacity: 0;
     transform: translateX(-100%);
     transition: .6s;
@@ -184,8 +185,7 @@ input[name="radio-btn"] {
 @media (max-width: 767px) {
 
     .card {
-        height: auto;
-        padding: 16px;
+        padding: 0 16px 16px 16px;
     }
 
     .card__image {
@@ -203,7 +203,7 @@ input[name="radio-btn"] {
     .carousel__nav {
         align-self: center;
         transform: translate(0);
-        transform: translateY(-500%);
+        transform: translateY(-580%);
     }
     
     .carousel__navlink {
@@ -216,9 +216,9 @@ input[name="radio-btn"] {
 
     .title {
         font-size: 2.8rem;
-    margin: 0 0 16px 0;
+        margin: 0 16px;
     }
     .carousel__nav {
-        transform: translateY(-600%);
+        transform: translateY(-680%);
     }
 }
