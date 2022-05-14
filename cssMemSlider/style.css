@@ -216,7 +216,7 @@ input[name="radio-btn"] {
 
     .title {
         font-size: 2.8rem;
-        margin: 0 16px;
+        margin: 16px 0;
     }
     .carousel__nav {
         transform: translateY(-680%);
