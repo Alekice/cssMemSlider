@@ -4,35 +4,48 @@
     box-sizing: border-box;
 }
 
-body {
+html {
+    font-size: 10px;
     font-family: Arial, Helvetica, sans-serif;
-    color: #25282A;
+    color: #FFFFFF;    
+    background-color: #08313A;
 }
 
 .container {
-    width: 1200px;
+    width: 100%;
+    max-width: 1200px;
+    height: 100vh;
     margin: 0 auto;
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-size: 3.2rem;
+    letter-spacing: 0.03em;
+    text-align: center;
+    margin: 0 0 32px 0;
 }
 
 .carousel {
-    width: 100%;
-    height: 618px;
+    width: 100%;   
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    padding: 0 32px;
 }
 
 .carousel__inner {
-    width: 4800px;
-    height: 100%;
+    width: 400%;
     display: flex;
 }
 
 .card {
     width: 25%;
-    height: 100%;
-    scroll-snap-align: center;
+    height: 668px;
+    padding: 32px;
     display: flex;
     flex-direction: column;
     transition: .6s;
@@ -43,6 +56,21 @@ body {
     aspect-ratio: 1 / 1;
     margin: 0 0 32px 0;
     align-self: center;
+    opacity: 0;
+    transform: scale(0);
+    transition: .6s;
+    border-radius: 15px;
+}
+
+.card__text {
+    font-size: 1.6rem;
+    letter-spacing: 0.03em;
+    font-weight: 700;
+    width: 40%;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: .6s;
+    transition-delay: .4s;
 }
 
 input[name="radio-btn"] {
@@ -54,16 +82,17 @@ input[name="radio-btn"] {
 .carousel__nav {
     display: flex;
     align-self: flex-end;
+    transform: translate(-32px, -86px);
 }
 
 .carousel__navlink {
-    width: 20px;
-    height: 20px;
-    margin: 4px;
+    width: 2rem;
+    height: 2rem;
+    margin: 0.4rem;
     border-radius: 100%;
     transition: .3s;
-    background-color: #08313A;
-    border: 2px solid #08313A;
+    background-color: #FFFFFF;
+    border: 2px solid #FFFFFF;
     cursor: pointer;
 }
 
@@ -96,6 +125,100 @@ input[name="radio-btn"] {
 #radio-btn2:checked ~ .carousel__nav label[for="radio-btn2"],
 #radio-btn3:checked ~ .carousel__nav label[for="radio-btn3"],
 #radio-btn4:checked ~ .carousel__nav label[for="radio-btn4"] {
-    border-color: #08313A;
+    border-color: #FFFFFF;
     background: transparent;
+}
+
+#radio-btn1:checked ~ .carousel__nav label[for="radio-btn1"]:hover,
+#radio-btn2:checked ~ .carousel__nav label[for="radio-btn2"]:hover,
+#radio-btn3:checked ~ .carousel__nav label[for="radio-btn3"]:hover,
+#radio-btn4:checked ~ .carousel__nav label[for="radio-btn4"]:hover {
+    border-color: #107869;
+    background: transparent;
+}
+
+/******** SHOW IMAGES ********/
+
+#radio-btn1:checked ~ .carousel__inner .card1 .card__image {
+    opacity: 1;
+    transform: scale(1);
+}
+
+#radio-btn2:checked ~ .carousel__inner .card2 .card__image {
+    opacity: 1;
+    transform: scale(1);
+}
+
+#radio-btn3:checked ~ .carousel__inner .card3 .card__image {
+    opacity: 1;
+    transform: scale(1);
+}
+
+#radio-btn4:checked ~ .carousel__inner .card4 .card__image {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/******** SHOW TEXT ********/
+
+#radio-btn1:checked ~ .carousel__inner .card1 .card__text {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+#radio-btn2:checked ~ .carousel__inner .card2 .card__text {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+#radio-btn3:checked ~ .carousel__inner .card3 .card__text {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+#radio-btn4:checked ~ .carousel__inner .card4 .card__text {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+@media (max-width: 767px) {
+
+    .card {
+        height: auto;
+        padding: 16px;
+    }
+
+    .card__image {
+        width: 100%;
+        margin: 0 0 75px 0;
+    }
+
+    .card__text {
+        width: 100%;
+        text-align: center;
+        transform: translateX(0);
+        transform: translateY(100%);
+    }
+
+    .carousel__nav {
+        align-self: center;
+        transform: translate(0);
+        transform: translateY(-500%);
+    }
+    
+    .carousel__navlink {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}
+
+@media (max-width: 463px) {
+
+    .title {
+        font-size: 2.8rem;
+    margin: 0 0 16px 0;
+    }
+    .carousel__nav {
+        transform: translateY(-600%);
+    }
 }
