@@ -48,6 +48,7 @@ html {
     display: flex;
     flex-direction: column;
     transition: .6s;
+    overflow: hidden;
 }
 
 .card__image {
