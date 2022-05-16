@@ -5,7 +5,7 @@
 }
 
 html {
-    font-size: 10px;
+    font-size: 0.625rem;
     font-family: Arial, Helvetica, sans-serif;
     color: #FFFFFF;    
     background-color: #08313A;
@@ -16,7 +16,7 @@ html {
     max-width: 768px;
     min-height: 100vh;
     margin: 0 auto;
-    padding: 0 16px;
+    padding: 0 1.6rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -27,7 +27,7 @@ html {
     font-size: 3.2rem;
     letter-spacing: 0.03em;
     text-align: center;
-    margin: 32px 0;
+    margin: 3.2rem 0;
 }
 
 .carousel {
@@ -44,7 +44,7 @@ html {
 
 .card {
     width: 25%;
-    padding: 0 32px 32px 32px;
+    padding: 0 3.2rem 3.2rem 3.2rem;
     display: flex;
     flex-direction: column;
     transition: .6s;
@@ -55,12 +55,12 @@ html {
     width: 100%;
     aspect-ratio: 1 / 1;
     object-fit: cover;
-    margin: 0 0 32px 0;
+    margin: 0 0 3.2rem 0;
     align-self: center;
     opacity: 0;
     transform: scale(0);
     transition: .6s;
-    border-radius: 15px;
+    border-radius: 1.5rem;
 }
 
 .card__text {
@@ -84,7 +84,7 @@ input[name="radio-btn"] {
 .carousel__nav {
     display: flex;
     align-self: flex-end;
-    transform: translate(-32px, -86px);
+    transform: translate(-3.2rem, -8.6rem);
 }
 
 .carousel__navlink {
@@ -104,7 +104,7 @@ input[name="radio-btn"] {
     border-radius: 100%;
     transition: .3s;
     background-color: #FFFFFF;
-    border: 2px solid #FFFFFF;
+    border: 0.2rem solid #FFFFFF;
 }
 
 .carousel__navlink:hover > * {
@@ -213,12 +213,12 @@ input[name="radio-btn"] {
 @media (max-width: 767px) {
 
     .card {
-        padding: 0 16px 16px 16px;
+        padding: 0 1.6rem 1.6rem 1.6rem;
     }
 
     .card__image {
         width: 100%;
-        margin: 0 0 75px 0;
+        margin: 0 0 7.5rem 0;
     }
 
     .card__text {
@@ -248,7 +248,7 @@ input[name="radio-btn"] {
 
     .title {
         font-size: 2.8rem;
-        margin: 16px 0;
+        margin: 1.6rem 0;
     }
     .carousel__nav {
         transform: translateY(-630%);
