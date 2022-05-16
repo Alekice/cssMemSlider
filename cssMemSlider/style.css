@@ -222,7 +222,6 @@ input[name="radio-btn"] {
 
     .card__text {
         width: 100%;
-        text-align: center;
         transform: translateX(0);
         transform: translateY(100%);
     }
